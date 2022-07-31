@@ -1,0 +1,3 @@
+(library
+ (name Tests)
+ (libraries alcotest usuba_lib Rsc))

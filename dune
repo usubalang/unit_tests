@@ -1,0 +1,8 @@
+(test
+ (name main)
+ (libraries alcotest usuba_lib usuba_pp Rsc Tests))
+
+(env
+ (dev
+  (flags
+   (:standard -warn-error -A))))
