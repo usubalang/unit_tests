@@ -103,98 +103,99 @@ let ace_007 = { nodes =
                              false));
                           orig = [] };
                          { content =
-                           (Loop ((Ident.create_unbound "i'"), (Const_e 0),
-                              (Const_e 7),
-                              [{ content =
-                                 (Eqn (
-                                    [(Index (
-                                        (Var (Ident.create_unbound "round'")),
-                                        (Op_e (Add,
-                                           (Var_e (Ident.create_unbound "i'")),
-                                           (Const_e 1)))
-                                        ))
-                                      ],
-                                    (Tuple
-                                       [(Log (Xor,
-                                           (Log (Xor,
-                                              (Log (Xor,
-                                                 (Fun (
-                                                    (Ident.create_unbound "f'"),
-                                                    [(Tuple
-                                                        [(Tuple
-                                                            [(ExpVar
-                                                                (Index (
-                                                                   (Index (
+                           Loop {id = (Ident.create_unbound "i'");
+                             start = (Const_e 0); stop = (Const_e 7);
+                             body =
+                             [{ content =
+                                (Eqn (
+                                   [(Index (
+                                       (Var (Ident.create_unbound "round'")),
+                                       (Op_e (Add,
+                                          (Var_e (Ident.create_unbound "i'")),
+                                          (Const_e 1)))
+                                       ))
+                                     ],
+                                   (Tuple
+                                      [(Log (Xor,
+                                          (Log (Xor,
+                                             (Log (Xor,
+                                                (Fun (
+                                                   (Ident.create_unbound "f'"),
+                                                   [(Tuple
+                                                       [(Tuple
+                                                           [(ExpVar
+                                                               (Index (
+                                                                  (Index (
                                                                     (Var
                                                                     (Ident.create_unbound "round'")),
                                                                     (Var_e
                                                                     (Ident.create_unbound "i'"))
                                                                     )),
-                                                                   (Const_e 0)
-                                                                   )))
-                                                              ])
-                                                          ])
-                                                      ]
-                                                    )),
-                                                 (Tuple
-                                                    [(Tuple
-                                                        [(ExpVar
-                                                            (Index (
-                                                               (Index (
-                                                                  (Var
+                                                                  (Const_e 0)
+                                                                  )))
+                                                             ])
+                                                         ])
+                                                     ]
+                                                   )),
+                                                (Tuple
+                                                   [(Tuple
+                                                       [(ExpVar
+                                                           (Index (
+                                                              (Index (
+                                                                 (Var
                                                                     (Ident.create_unbound "round'")),
-                                                                  (Var_e
+                                                                 (Var_e
                                                                     (Ident.create_unbound "i'"))
-                                                                  )),
-                                                               (Const_e 1))))
-                                                          ])
-                                                      ])
-                                                 )),
-                                              (Const (4294967294,
-                                                 (Some (Uint (
-                                                          (Varslice
-                                                             (Ident.create_unbound "D")),
-                                                          (Mint 32), 1)))
-                                                 ))
-                                              )),
-                                           (Log (And,
-                                              (Shift (Rshift,
-                                                 (Tuple
-                                                    [(Tuple
-                                                        [(ExpVar
-                                                            (Var
-                                                               (Ident.create_unbound "rc'")))
-                                                          ])
-                                                      ]),
-                                                 (Var_e
-                                                    (Ident.create_unbound "i'"))
-                                                 )),
-                                              (Const (1,
-                                                 (Some (Uint (
-                                                          (Varslice
-                                                             (Ident.create_unbound "D")),
-                                                          (Mint 32), 1)))
-                                                 ))
-                                              ))
-                                           ));
-                                         (Tuple
-                                            [(Tuple
-                                                [(ExpVar
-                                                    (Index (
-                                                       (Index (
-                                                          (Var
-                                                             (Ident.create_unbound "round'")),
-                                                          (Var_e
-                                                             (Ident.create_unbound "i'"))
-                                                          )),
-                                                       (Const_e 0))))
-                                                  ])
-                                              ])
-                                         ]),
-                                    false));
-                                 orig = [] }
-                                ],
-                              []));
+                                                                 )),
+                                                              (Const_e 1))))
+                                                         ])
+                                                     ])
+                                                )),
+                                             (Const (4294967294,
+                                                (Some (Uint (
+                                                         (Varslice
+                                                            (Ident.create_unbound "D")),
+                                                         (Mint 32), 1)))
+                                                ))
+                                             )),
+                                          (Log (And,
+                                             (Shift (Rshift,
+                                                (Tuple
+                                                   [(Tuple
+                                                       [(ExpVar
+                                                           (Var
+                                                              (Ident.create_unbound "rc'")))
+                                                         ])
+                                                     ]),
+                                                (Var_e
+                                                   (Ident.create_unbound "i'"))
+                                                )),
+                                             (Const (1,
+                                                (Some (Uint (
+                                                         (Varslice
+                                                            (Ident.create_unbound "D")),
+                                                         (Mint 32), 1)))
+                                                ))
+                                             ))
+                                          ));
+                                        (Tuple
+                                           [(Tuple
+                                               [(ExpVar
+                                                   (Index (
+                                                      (Index (
+                                                         (Var
+                                                            (Ident.create_unbound "round'")),
+                                                         (Var_e
+                                                            (Ident.create_unbound "i'"))
+                                                         )),
+                                                      (Const_e 0))))
+                                                 ])
+                                             ])
+                                        ]),
+                                   false));
+                                orig = [] }
+                               ];
+                             opts = []};
                            orig = [] };
                          { content =
                            (Eqn ([(Var (Ident.create_unbound "output'"))],
@@ -1255,105 +1256,106 @@ let ace_007 = { nodes =
                               false));
                            orig = [] };
                          { content =
-                           (Loop ((Ident.create_unbound "i'"), (Const_e 0),
-                              (Const_e 15),
-                              [{ content =
-                                 (Eqn (
-                                    [(Index (
-                                        (Var (Ident.create_unbound "state'")),
-                                        (Op_e (Add,
-                                           (Var_e (Ident.create_unbound "i'")),
-                                           (Const_e 1)))
-                                        ))
-                                      ],
-                                    (Fun ((Ident.create_unbound "ACE_step'"),
-                                       [(Tuple
+                           Loop {id = (Ident.create_unbound "i'");
+                             start = (Const_e 0); stop = (Const_e 15);
+                             body =
+                             [{ content =
+                                (Eqn (
+                                   [(Index (
+                                       (Var (Ident.create_unbound "state'")),
+                                       (Op_e (Add,
+                                          (Var_e (Ident.create_unbound "i'")),
+                                          (Const_e 1)))
+                                       ))
+                                     ],
+                                   (Fun ((Ident.create_unbound "ACE_step'"),
+                                      [(Tuple
+                                          [(Tuple
+                                              [(ExpVar
+                                                  (Index (
+                                                     (Var
+                                                        (Ident.create_unbound "state'")),
+                                                     (Var_e
+                                                        (Ident.create_unbound "i'"))
+                                                     )))
+                                                ])
+                                            ]);
+                                        (Tuple
                                            [(Tuple
                                                [(ExpVar
                                                    (Index (
-                                                      (Var
-                                                         (Ident.create_unbound "state'")),
+                                                      (Index (
+                                                         (Var
+                                                            (Ident.create_unbound "RC'")),
+                                                         (Const_e 0))),
                                                       (Var_e
                                                          (Ident.create_unbound "i'"))
                                                       )))
-                                                 ])
-                                             ]);
-                                         (Tuple
-                                            [(Tuple
+                                                 ]);
+                                             (Tuple
                                                 [(ExpVar
                                                     (Index (
                                                        (Index (
                                                           (Var
                                                              (Ident.create_unbound "RC'")),
-                                                          (Const_e 0))),
+                                                          (Const_e 1))),
                                                        (Var_e
                                                           (Ident.create_unbound "i'"))
                                                        )))
                                                   ]);
-                                              (Tuple
-                                                 [(ExpVar
-                                                     (Index (
-                                                        (Index (
-                                                           (Var
-                                                              (Ident.create_unbound "RC'")),
-                                                           (Const_e 1))),
-                                                        (Var_e
-                                                           (Ident.create_unbound "i'"))
-                                                        )))
-                                                   ]);
-                                              (Tuple
-                                                 [(ExpVar
-                                                     (Index (
-                                                        (Index (
-                                                           (Var
-                                                              (Ident.create_unbound "RC'")),
-                                                           (Const_e 2))),
-                                                        (Var_e
-                                                           (Ident.create_unbound "i'"))
-                                                        )))
-                                                   ])
-                                              ]);
-                                         (Tuple
-                                            [(Tuple
+                                             (Tuple
+                                                [(ExpVar
+                                                    (Index (
+                                                       (Index (
+                                                          (Var
+                                                             (Ident.create_unbound "RC'")),
+                                                          (Const_e 2))),
+                                                       (Var_e
+                                                          (Ident.create_unbound "i'"))
+                                                       )))
+                                                  ])
+                                             ]);
+                                        (Tuple
+                                           [(Tuple
+                                               [(ExpVar
+                                                   (Index (
+                                                      (Index (
+                                                         (Var
+                                                            (Ident.create_unbound "SC'")),
+                                                         (Const_e 0))),
+                                                      (Var_e
+                                                         (Ident.create_unbound "i'"))
+                                                      )))
+                                                 ]);
+                                             (Tuple
                                                 [(ExpVar
                                                     (Index (
                                                        (Index (
                                                           (Var
                                                              (Ident.create_unbound "SC'")),
-                                                          (Const_e 0))),
+                                                          (Const_e 1))),
                                                        (Var_e
                                                           (Ident.create_unbound "i'"))
                                                        )))
                                                   ]);
-                                              (Tuple
-                                                 [(ExpVar
-                                                     (Index (
-                                                        (Index (
-                                                           (Var
-                                                              (Ident.create_unbound "SC'")),
-                                                           (Const_e 1))),
-                                                        (Var_e
-                                                           (Ident.create_unbound "i'"))
-                                                        )))
-                                                   ]);
-                                              (Tuple
-                                                 [(ExpVar
-                                                     (Index (
-                                                        (Index (
-                                                           (Var
-                                                              (Ident.create_unbound "SC'")),
-                                                           (Const_e 2))),
-                                                        (Var_e
-                                                           (Ident.create_unbound "i'"))
-                                                        )))
-                                                   ])
-                                              ])
-                                         ]
-                                       )),
-                                    false));
-                                 orig = [] }
-                                ],
-                              []));
+                                             (Tuple
+                                                [(ExpVar
+                                                    (Index (
+                                                       (Index (
+                                                          (Var
+                                                             (Ident.create_unbound "SC'")),
+                                                          (Const_e 2))),
+                                                       (Var_e
+                                                          (Ident.create_unbound "i'"))
+                                                       )))
+                                                  ])
+                                             ])
+                                        ]
+                                      )),
+                                   false));
+                                orig = [] }
+                               ];
+                             opts = []};
                            orig = [] };
                          { content =
                            (Eqn ([(Var (Ident.create_unbound "output'"))],

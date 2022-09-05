@@ -492,55 +492,56 @@ let rectangle_007 = { nodes =
                                    false));
                                 orig = [] };
                                { content =
-                                 (Loop ((Ident.create_unbound "i'"),
-                                    (Const_e 0), (Const_e 24),
-                                    [{ content =
-                                       (Eqn (
-                                          [(Index (
-                                              (Var
-                                                 (Ident.create_unbound "tmp'")),
-                                              (Op_e (Add,
-                                                 (Var_e
-                                                    (Ident.create_unbound "i'")),
-                                                 (Const_e 1)))
-                                              ))
-                                            ],
-                                          (Fun (
-                                             (Ident.create_unbound "ShiftRows'"),
-                                             [(Fun (
-                                                 (Ident.create_unbound "SubColumn'"),
-                                                 [(Log (Xor,
-                                                     (Tuple
-                                                        [(Tuple
-                                                            [(ExpVar
-                                                                (Index (
-                                                                   (Var
+                                 Loop {id = (Ident.create_unbound "i'");
+                                   start = (Const_e 0); stop = (Const_e 24);
+                                   body =
+                                   [{ content =
+                                      (Eqn (
+                                         [(Index (
+                                             (Var
+                                                (Ident.create_unbound "tmp'")),
+                                             (Op_e (Add,
+                                                (Var_e
+                                                   (Ident.create_unbound "i'")),
+                                                (Const_e 1)))
+                                             ))
+                                           ],
+                                         (Fun (
+                                            (Ident.create_unbound "ShiftRows'"),
+                                            [(Fun (
+                                                (Ident.create_unbound "SubColumn'"),
+                                                [(Log (Xor,
+                                                    (Tuple
+                                                       [(Tuple
+                                                           [(ExpVar
+                                                               (Index (
+                                                                  (Var
                                                                     (Ident.create_unbound "tmp'")),
-                                                                   (Var_e
+                                                                  (Var_e
                                                                     (Ident.create_unbound "i'"))
-                                                                   )))
-                                                              ])
-                                                          ]),
-                                                     (Tuple
-                                                        [(Tuple
-                                                            [(ExpVar
-                                                                (Index (
-                                                                   (Var
+                                                                  )))
+                                                             ])
+                                                         ]),
+                                                    (Tuple
+                                                       [(Tuple
+                                                           [(ExpVar
+                                                               (Index (
+                                                                  (Var
                                                                     (Ident.create_unbound "key'")),
-                                                                   (Var_e
+                                                                  (Var_e
                                                                     (Ident.create_unbound "i'"))
-                                                                   )))
-                                                              ])
-                                                          ])
-                                                     ))
-                                                   ]
-                                                 ))
-                                               ]
-                                             )),
-                                          false));
-                                       orig = [] }
-                                      ],
-                                    []));
+                                                                  )))
+                                                             ])
+                                                         ])
+                                                    ))
+                                                  ]
+                                                ))
+                                              ]
+                                            )),
+                                         false));
+                                      orig = [] }
+                                     ];
+                                   opts = []};
                                  orig = [] };
                                { content =
                                  (Eqn (
