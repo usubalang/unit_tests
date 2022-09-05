@@ -3856,78 +3856,90 @@ let aes_mslice_056 = { nodes =
                                      false));
                                   orig = [] };
                                 { content =
-                                  (Loop ((Ident.create_unbound "i'"),
-                                     (Const_e 1), (Const_e 9),
-                                     [{ content =
-                                        (Eqn (
-                                           [(Index (
+                                  Loop {id = (Ident.create_unbound "i'");
+                                    start = (Const_e 1); stop = (Const_e 9);
+                                    body =
+                                    [{ content =
+                                       (Eqn (
+                                          [(Index (
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "_tmp80_")),
+                                                 (Var_e
+                                                    (Ident.create_unbound "i'"))
+                                                 )),
+                                              (Const_e 0)));
+                                            (Index (
                                                (Index (
                                                   (Var
                                                      (Ident.create_unbound "_tmp80_")),
                                                   (Var_e
                                                      (Ident.create_unbound "i'"))
                                                   )),
-                                               (Const_e 0)));
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp80_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 1)));
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp80_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 2)));
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp80_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 3)));
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp80_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 4)));
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp80_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 5)));
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp80_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 6)));
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp80_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 7)))
-                                             ],
-                                           (Fun (
-                                              (Ident.create_unbound "SubBytes'H16"),
-                                              [(ExpVar
+                                               (Const_e 1)));
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp80_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 2)));
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp80_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 3)));
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp80_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 4)));
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp80_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 5)));
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp80_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 6)));
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp80_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 7)))
+                                            ],
+                                          (Fun (
+                                             (Ident.create_unbound "SubBytes'H16"),
+                                             [(ExpVar
+                                                 (Index (
+                                                    (Index (
+                                                       (Var
+                                                          (Ident.create_unbound "tmp'")),
+                                                       (Op_e (Sub,
+                                                          (Var_e
+                                                             (Ident.create_unbound "i'")),
+                                                          (Const_e 1)))
+                                                       )),
+                                                    (Const_e 0))));
+                                               (ExpVar
                                                   (Index (
                                                      (Index (
                                                         (Var
@@ -3937,163 +3949,152 @@ let aes_mslice_056 = { nodes =
                                                               (Ident.create_unbound "i'")),
                                                            (Const_e 1)))
                                                         )),
-                                                     (Const_e 0))));
-                                                (ExpVar
-                                                   (Index (
-                                                      (Index (
-                                                         (Var
-                                                            (Ident.create_unbound "tmp'")),
-                                                         (Op_e (Sub,
-                                                            (Var_e
-                                                               (Ident.create_unbound "i'")),
-                                                            (Const_e 1)))
-                                                         )),
-                                                      (Const_e 1))));
-                                                (ExpVar
-                                                   (Index (
-                                                      (Index (
-                                                         (Var
-                                                            (Ident.create_unbound "tmp'")),
-                                                         (Op_e (Sub,
-                                                            (Var_e
-                                                               (Ident.create_unbound "i'")),
-                                                            (Const_e 1)))
-                                                         )),
-                                                      (Const_e 2))));
-                                                (ExpVar
-                                                   (Index (
-                                                      (Index (
-                                                         (Var
-                                                            (Ident.create_unbound "tmp'")),
-                                                         (Op_e (Sub,
-                                                            (Var_e
-                                                               (Ident.create_unbound "i'")),
-                                                            (Const_e 1)))
-                                                         )),
-                                                      (Const_e 3))));
-                                                (ExpVar
-                                                   (Index (
-                                                      (Index (
-                                                         (Var
-                                                            (Ident.create_unbound "tmp'")),
-                                                         (Op_e (Sub,
-                                                            (Var_e
-                                                               (Ident.create_unbound "i'")),
-                                                            (Const_e 1)))
-                                                         )),
-                                                      (Const_e 4))));
-                                                (ExpVar
-                                                   (Index (
-                                                      (Index (
-                                                         (Var
-                                                            (Ident.create_unbound "tmp'")),
-                                                         (Op_e (Sub,
-                                                            (Var_e
-                                                               (Ident.create_unbound "i'")),
-                                                            (Const_e 1)))
-                                                         )),
-                                                      (Const_e 5))));
-                                                (ExpVar
-                                                   (Index (
-                                                      (Index (
-                                                         (Var
-                                                            (Ident.create_unbound "tmp'")),
-                                                         (Op_e (Sub,
-                                                            (Var_e
-                                                               (Ident.create_unbound "i'")),
-                                                            (Const_e 1)))
-                                                         )),
-                                                      (Const_e 6))));
-                                                (ExpVar
-                                                   (Index (
-                                                      (Index (
-                                                         (Var
-                                                            (Ident.create_unbound "tmp'")),
-                                                         (Op_e (Sub,
-                                                            (Var_e
-                                                               (Ident.create_unbound "i'")),
-                                                            (Const_e 1)))
-                                                         )),
-                                                      (Const_e 7))))
+                                                     (Const_e 1))));
+                                               (ExpVar
+                                                  (Index (
+                                                     (Index (
+                                                        (Var
+                                                           (Ident.create_unbound "tmp'")),
+                                                        (Op_e (Sub,
+                                                           (Var_e
+                                                              (Ident.create_unbound "i'")),
+                                                           (Const_e 1)))
+                                                        )),
+                                                     (Const_e 2))));
+                                               (ExpVar
+                                                  (Index (
+                                                     (Index (
+                                                        (Var
+                                                           (Ident.create_unbound "tmp'")),
+                                                        (Op_e (Sub,
+                                                           (Var_e
+                                                              (Ident.create_unbound "i'")),
+                                                           (Const_e 1)))
+                                                        )),
+                                                     (Const_e 3))));
+                                               (ExpVar
+                                                  (Index (
+                                                     (Index (
+                                                        (Var
+                                                           (Ident.create_unbound "tmp'")),
+                                                        (Op_e (Sub,
+                                                           (Var_e
+                                                              (Ident.create_unbound "i'")),
+                                                           (Const_e 1)))
+                                                        )),
+                                                     (Const_e 4))));
+                                               (ExpVar
+                                                  (Index (
+                                                     (Index (
+                                                        (Var
+                                                           (Ident.create_unbound "tmp'")),
+                                                        (Op_e (Sub,
+                                                           (Var_e
+                                                              (Ident.create_unbound "i'")),
+                                                           (Const_e 1)))
+                                                        )),
+                                                     (Const_e 5))));
+                                               (ExpVar
+                                                  (Index (
+                                                     (Index (
+                                                        (Var
+                                                           (Ident.create_unbound "tmp'")),
+                                                        (Op_e (Sub,
+                                                           (Var_e
+                                                              (Ident.create_unbound "i'")),
+                                                           (Const_e 1)))
+                                                        )),
+                                                     (Const_e 6))));
+                                               (ExpVar
+                                                  (Index (
+                                                     (Index (
+                                                        (Var
+                                                           (Ident.create_unbound "tmp'")),
+                                                        (Op_e (Sub,
+                                                           (Var_e
+                                                              (Ident.create_unbound "i'")),
+                                                           (Const_e 1)))
+                                                        )),
+                                                     (Const_e 7))))
+                                               ]
+                                             )),
+                                          false));
+                                       orig = [] };
+                                      { content =
+                                        (Eqn (
+                                           [(Index (
+                                               (Var
+                                                  (Ident.create_unbound "_tmp81_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               ))
+                                             ],
+                                           (Fun (
+                                              (Ident.create_unbound "ShiftRows'H16"),
+                                              [(ExpVar
+                                                  (Index (
+                                                     (Var
+                                                        (Ident.create_unbound "_tmp80_")),
+                                                     (Var_e
+                                                        (Ident.create_unbound "i'"))
+                                                     )))
                                                 ]
                                               )),
                                            false));
                                         orig = [] };
-                                       { content =
-                                         (Eqn (
-                                            [(Index (
-                                                (Var
-                                                   (Ident.create_unbound "_tmp81_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                ))
-                                              ],
-                                            (Fun (
-                                               (Ident.create_unbound "ShiftRows'H16"),
-                                               [(ExpVar
+                                      { content =
+                                        (Eqn (
+                                           [(Index (
+                                               (Var
+                                                  (Ident.create_unbound "_tmp82_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               ))
+                                             ],
+                                           (Fun (
+                                              (Ident.create_unbound "MixColumn'H16"),
+                                              [(ExpVar
+                                                  (Index (
+                                                     (Var
+                                                        (Ident.create_unbound "_tmp81_")),
+                                                     (Var_e
+                                                        (Ident.create_unbound "i'"))
+                                                     )))
+                                                ]
+                                              )),
+                                           false));
+                                        orig = [] };
+                                      { content =
+                                        (Eqn (
+                                           [(Index (
+                                               (Var
+                                                  (Ident.create_unbound "tmp'")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               ))
+                                             ],
+                                           (Fun (
+                                              (Ident.create_unbound "AddRoundKey'H16"),
+                                              [(ExpVar
+                                                  (Index (
+                                                     (Var
+                                                        (Ident.create_unbound "_tmp82_")),
+                                                     (Var_e
+                                                        (Ident.create_unbound "i'"))
+                                                     )));
+                                                (ExpVar
                                                    (Index (
                                                       (Var
-                                                         (Ident.create_unbound "_tmp80_")),
+                                                         (Ident.create_unbound "key'")),
                                                       (Var_e
                                                          (Ident.create_unbound "i'"))
                                                       )))
-                                                 ]
-                                               )),
-                                            false));
-                                         orig = [] };
-                                       { content =
-                                         (Eqn (
-                                            [(Index (
-                                                (Var
-                                                   (Ident.create_unbound "_tmp82_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                ))
-                                              ],
-                                            (Fun (
-                                               (Ident.create_unbound "MixColumn'H16"),
-                                               [(ExpVar
-                                                   (Index (
-                                                      (Var
-                                                         (Ident.create_unbound "_tmp81_")),
-                                                      (Var_e
-                                                         (Ident.create_unbound "i'"))
-                                                      )))
-                                                 ]
-                                               )),
-                                            false));
-                                         orig = [] };
-                                       { content =
-                                         (Eqn (
-                                            [(Index (
-                                                (Var
-                                                   (Ident.create_unbound "tmp'")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                ))
-                                              ],
-                                            (Fun (
-                                               (Ident.create_unbound "AddRoundKey'H16"),
-                                               [(ExpVar
-                                                   (Index (
-                                                      (Var
-                                                         (Ident.create_unbound "_tmp82_")),
-                                                      (Var_e
-                                                         (Ident.create_unbound "i'"))
-                                                      )));
-                                                 (ExpVar
-                                                    (Index (
-                                                       (Var
-                                                          (Ident.create_unbound "key'")),
-                                                       (Var_e
-                                                          (Ident.create_unbound "i'"))
-                                                       )))
-                                                 ]
-                                               )),
-                                            false));
-                                         orig = [] }
-                                       ],
-                                     []));
+                                                ]
+                                              )),
+                                           false));
+                                        orig = [] }
+                                      ];
+                                    opts = []};
                                   orig = [] };
                                 { content =
                                   (Eqn (

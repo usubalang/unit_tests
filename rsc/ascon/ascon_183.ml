@@ -844,9 +844,60 @@ let ascon_183 = { nodes =
                                 false));
                              orig = [] };
                            { content =
-                             (Loop ((Ident.create_unbound "i'"), (Const_e 0),
-                                (Const_e 11),
-                                [{ content =
+                             Loop {id = (Ident.create_unbound "i'");
+                               start = (Const_e 0); stop = (Const_e 11);
+                               body =
+                               [{ content =
+                                  (Eqn (
+                                     [(Index (
+                                         (Index (
+                                            (Var
+                                               (Ident.create_unbound "_tmp29_")),
+                                            (Var_e
+                                               (Ident.create_unbound "i'"))
+                                            )),
+                                         (Const_e 2)))
+                                       ],
+                                     (Log (Xor,
+                                        (ExpVar
+                                           (Index (
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Var_e
+                                                    (Ident.create_unbound "i'"))
+                                                 )),
+                                              (Const_e 2)))),
+                                        (ExpVar
+                                           (Index (
+                                              (Var
+                                                 (Ident.create_unbound "consts'")),
+                                              (Var_e
+                                                 (Ident.create_unbound "i'"))
+                                              )))
+                                        )),
+                                     false));
+                                  orig =
+                                  [((Ident.create_unbound "AddConstant'V64"),
+                                    (Eqn (
+                                       [(Index (
+                                           (Var
+                                              (Ident.create_unbound "stateR'")),
+                                           (Const_e 2)))
+                                         ],
+                                       (Log (Xor,
+                                          (ExpVar
+                                             (Index (
+                                                (Var
+                                                   (Ident.create_unbound "state'")),
+                                                (Const_e 2)))),
+                                          (ExpVar
+                                             (Var (Ident.create_unbound "c'")))
+                                          )),
+                                       false)))
+                                    ]
+                                  };
+                                 { content =
                                    (Eqn (
                                       [(Index (
                                           (Index (
@@ -855,26 +906,17 @@ let ascon_183 = { nodes =
                                              (Var_e
                                                 (Ident.create_unbound "i'"))
                                              )),
-                                          (Const_e 2)))
+                                          (Const_e 0)))
                                         ],
-                                      (Log (Xor,
-                                         (ExpVar
-                                            (Index (
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Var_e
-                                                     (Ident.create_unbound "i'"))
-                                                  )),
-                                               (Const_e 2)))),
-                                         (ExpVar
+                                      (ExpVar
+                                         (Index (
                                             (Index (
                                                (Var
-                                                  (Ident.create_unbound "consts'")),
+                                                  (Ident.create_unbound "state'")),
                                                (Var_e
                                                   (Ident.create_unbound "i'"))
-                                               )))
-                                         )),
+                                               )),
+                                            (Const_e 0)))),
                                       false));
                                    orig =
                                    [((Ident.create_unbound "AddConstant'V64"),
@@ -882,7 +924,542 @@ let ascon_183 = { nodes =
                                         [(Index (
                                             (Var
                                                (Ident.create_unbound "stateR'")),
-                                            (Const_e 2)))
+                                            (Const_e 0)))
+                                          ],
+                                        (ExpVar
+                                           (Index (
+                                              (Var
+                                                 (Ident.create_unbound "state'")),
+                                              (Const_e 0)))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Index (
+                                             (Var
+                                                (Ident.create_unbound "_tmp29_")),
+                                             (Var_e
+                                                (Ident.create_unbound "i'"))
+                                             )),
+                                          (Const_e 1)))
+                                        ],
+                                      (ExpVar
+                                         (Index (
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "state'")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )),
+                                            (Const_e 1)))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "AddConstant'V64"),
+                                     (Eqn (
+                                        [(Index (
+                                            (Var
+                                               (Ident.create_unbound "stateR'")),
+                                            (Const_e 1)))
+                                          ],
+                                        (ExpVar
+                                           (Index (
+                                              (Var
+                                                 (Ident.create_unbound "state'")),
+                                              (Const_e 1)))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Index (
+                                             (Var
+                                                (Ident.create_unbound "_tmp29_")),
+                                             (Var_e
+                                                (Ident.create_unbound "i'"))
+                                             )),
+                                          (Const_e 3)))
+                                        ],
+                                      (ExpVar
+                                         (Index (
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "state'")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )),
+                                            (Const_e 3)))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "AddConstant'V64"),
+                                     (Eqn (
+                                        [(Index (
+                                            (Var
+                                               (Ident.create_unbound "stateR'")),
+                                            (Const_e 3)))
+                                          ],
+                                        (ExpVar
+                                           (Index (
+                                              (Var
+                                                 (Ident.create_unbound "state'")),
+                                              (Const_e 3)))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Index (
+                                             (Var
+                                                (Ident.create_unbound "_tmp29_")),
+                                             (Var_e
+                                                (Ident.create_unbound "i'"))
+                                             )),
+                                          (Const_e 4)))
+                                        ],
+                                      (ExpVar
+                                         (Index (
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "state'")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )),
+                                            (Const_e 4)))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "AddConstant'V64"),
+                                     (Eqn (
+                                        [(Index (
+                                            (Var
+                                               (Ident.create_unbound "stateR'")),
+                                            (Const_e 4)))
+                                          ],
+                                        (ExpVar
+                                           (Index (
+                                              (Var
+                                                 (Ident.create_unbound "state'")),
+                                              (Const_e 4)))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "_tmp30_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Fun (
+                                         (Ident.create_unbound "Sbox'V64"),
+                                         [(ExpVar
+                                             (Index (
+                                                (Var
+                                                   (Ident.create_unbound "_tmp29_")),
+                                                (Var_e
+                                                   (Ident.create_unbound "i'"))
+                                                )))
+                                           ]
+                                         )),
+                                      false));
+                                   orig = [] };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp2_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Shift (Rrotate,
+                                         (ExpVar
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 0)))),
+                                         (Const_e 19))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var (Ident.create_unbound "_tmp2_"))
+                                          ],
+                                        (Shift (Rrotate,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 0)))),
+                                           (Const_e 19))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp3_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Log (Xor,
+                                         (ExpVar
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 0)))),
+                                         (ExpVar
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp2_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )))
+                                         )),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var (Ident.create_unbound "_tmp3_"))
+                                          ],
+                                        (Log (Xor,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 0)))),
+                                           (ExpVar
+                                              (Var
+                                                 (Ident.create_unbound "_tmp2_")))
+                                           )),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp4_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Shift (Rrotate,
+                                         (ExpVar
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 0)))),
+                                         (Const_e 28))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var (Ident.create_unbound "_tmp4_"))
+                                          ],
+                                        (Shift (Rrotate,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 0)))),
+                                           (Const_e 28))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Index (
+                                             (Var
+                                                (Ident.create_unbound "state'")),
+                                             (Op_e (Add,
+                                                (Var_e
+                                                   (Ident.create_unbound "i'")),
+                                                (Const_e 1)))
+                                             )),
+                                          (Const_e 0)))
+                                        ],
+                                      (Log (Xor,
+                                         (ExpVar
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp3_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               ))),
+                                         (ExpVar
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp4_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )))
+                                         )),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Index (
+                                            (Var
+                                               (Ident.create_unbound "stateR'")),
+                                            (Const_e 0)))
+                                          ],
+                                        (Log (Xor,
+                                           (ExpVar
+                                              (Var
+                                                 (Ident.create_unbound "_tmp3_"))),
+                                           (ExpVar
+                                              (Var
+                                                 (Ident.create_unbound "_tmp4_")))
+                                           )),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp5_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Shift (Rrotate,
+                                         (ExpVar
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 1)))),
+                                         (Const_e 61))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var (Ident.create_unbound "_tmp5_"))
+                                          ],
+                                        (Shift (Rrotate,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 1)))),
+                                           (Const_e 61))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp6_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Log (Xor,
+                                         (ExpVar
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 1)))),
+                                         (ExpVar
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp5_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )))
+                                         )),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var (Ident.create_unbound "_tmp6_"))
+                                          ],
+                                        (Log (Xor,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 1)))),
+                                           (ExpVar
+                                              (Var
+                                                 (Ident.create_unbound "_tmp5_")))
+                                           )),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp7_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Shift (Rrotate,
+                                         (ExpVar
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 1)))),
+                                         (Const_e 39))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var (Ident.create_unbound "_tmp7_"))
+                                          ],
+                                        (Shift (Rrotate,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 1)))),
+                                           (Const_e 39))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Index (
+                                             (Var
+                                                (Ident.create_unbound "state'")),
+                                             (Op_e (Add,
+                                                (Var_e
+                                                   (Ident.create_unbound "i'")),
+                                                (Const_e 1)))
+                                             )),
+                                          (Const_e 1)))
+                                        ],
+                                      (Log (Xor,
+                                         (ExpVar
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp6_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               ))),
+                                         (ExpVar
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp7_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )))
+                                         )),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Index (
+                                            (Var
+                                               (Ident.create_unbound "stateR'")),
+                                            (Const_e 1)))
+                                          ],
+                                        (Log (Xor,
+                                           (ExpVar
+                                              (Var
+                                                 (Ident.create_unbound "_tmp6_"))),
+                                           (ExpVar
+                                              (Var
+                                                 (Ident.create_unbound "_tmp7_")))
+                                           )),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp8_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Shift (Rrotate,
+                                         (ExpVar
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 2)))),
+                                         (Const_e 1))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var (Ident.create_unbound "_tmp8_"))
+                                          ],
+                                        (Shift (Rrotate,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 2)))),
+                                           (Const_e 1))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp9_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Log (Xor,
+                                         (ExpVar
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 2)))),
+                                         (ExpVar
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp8_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )))
+                                         )),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var (Ident.create_unbound "_tmp9_"))
                                           ],
                                         (Log (Xor,
                                            (ExpVar
@@ -892,1017 +1469,432 @@ let ascon_183 = { nodes =
                                                  (Const_e 2)))),
                                            (ExpVar
                                               (Var
-                                                 (Ident.create_unbound "c'")))
+                                                 (Ident.create_unbound "_tmp8_")))
                                            )),
                                         false)))
                                      ]
                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Index (
-                                              (Var
-                                                 (Ident.create_unbound "_tmp29_")),
-                                              (Var_e
-                                                 (Ident.create_unbound "i'"))
-                                              )),
-                                           (Const_e 0)))
-                                         ],
-                                       (ExpVar
-                                          (Index (
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "state'")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )),
-                                             (Const_e 0)))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "AddConstant'V64"),
-                                      (Eqn (
-                                         [(Index (
-                                             (Var
-                                                (Ident.create_unbound "stateR'")),
-                                             (Const_e 0)))
-                                           ],
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp10_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Shift (Rrotate,
                                          (ExpVar
                                             (Index (
-                                               (Var
-                                                  (Ident.create_unbound "state'")),
-                                               (Const_e 0)))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Index (
-                                              (Var
-                                                 (Ident.create_unbound "_tmp29_")),
-                                              (Var_e
-                                                 (Ident.create_unbound "i'"))
-                                              )),
-                                           (Const_e 1)))
-                                         ],
-                                       (ExpVar
-                                          (Index (
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "state'")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )),
-                                             (Const_e 1)))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "AddConstant'V64"),
-                                      (Eqn (
-                                         [(Index (
-                                             (Var
-                                                (Ident.create_unbound "stateR'")),
-                                             (Const_e 1)))
-                                           ],
-                                         (ExpVar
-                                            (Index (
-                                               (Var
-                                                  (Ident.create_unbound "state'")),
-                                               (Const_e 1)))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Index (
-                                              (Var
-                                                 (Ident.create_unbound "_tmp29_")),
-                                              (Var_e
-                                                 (Ident.create_unbound "i'"))
-                                              )),
-                                           (Const_e 3)))
-                                         ],
-                                       (ExpVar
-                                          (Index (
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "state'")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )),
-                                             (Const_e 3)))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "AddConstant'V64"),
-                                      (Eqn (
-                                         [(Index (
-                                             (Var
-                                                (Ident.create_unbound "stateR'")),
-                                             (Const_e 3)))
-                                           ],
-                                         (ExpVar
-                                            (Index (
-                                               (Var
-                                                  (Ident.create_unbound "state'")),
-                                               (Const_e 3)))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Index (
-                                              (Var
-                                                 (Ident.create_unbound "_tmp29_")),
-                                              (Var_e
-                                                 (Ident.create_unbound "i'"))
-                                              )),
-                                           (Const_e 4)))
-                                         ],
-                                       (ExpVar
-                                          (Index (
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "state'")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )),
-                                             (Const_e 4)))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "AddConstant'V64"),
-                                      (Eqn (
-                                         [(Index (
-                                             (Var
-                                                (Ident.create_unbound "stateR'")),
-                                             (Const_e 4)))
-                                           ],
-                                         (ExpVar
-                                            (Index (
-                                               (Var
-                                                  (Ident.create_unbound "state'")),
-                                               (Const_e 4)))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "_tmp30_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Fun (
-                                          (Ident.create_unbound "Sbox'V64"),
-                                          [(ExpVar
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 2)))),
+                                         (Const_e 6))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var
+                                            (Ident.create_unbound "_tmp10_"))
+                                          ],
+                                        (Shift (Rrotate,
+                                           (ExpVar
                                               (Index (
                                                  (Var
-                                                    (Ident.create_unbound "_tmp29_")),
-                                                 (Var_e
-                                                    (Ident.create_unbound "i'"))
-                                                 )))
-                                            ]
-                                          )),
-                                       false));
-                                    orig = [] };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp2_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Shift (Rrotate,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 0)))),
-                                          (Const_e 19))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp2_"))
-                                           ],
-                                         (Shift (Rrotate,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 0)))),
-                                            (Const_e 19))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp3_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Log (Xor,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 0)))),
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp2_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )))
-                                          )),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp3_"))
-                                           ],
-                                         (Log (Xor,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 0)))),
-                                            (ExpVar
-                                               (Var
-                                                  (Ident.create_unbound "_tmp2_")))
-                                            )),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp4_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Shift (Rrotate,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 0)))),
-                                          (Const_e 28))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp4_"))
-                                           ],
-                                         (Shift (Rrotate,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 0)))),
-                                            (Const_e 28))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Index (
-                                              (Var
-                                                 (Ident.create_unbound "state'")),
-                                              (Op_e (Add,
-                                                 (Var_e
-                                                    (Ident.create_unbound "i'")),
-                                                 (Const_e 1)))
-                                              )),
-                                           (Const_e 0)))
-                                         ],
-                                       (Log (Xor,
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp3_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                ))),
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp4_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )))
-                                          )),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Index (
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 2)))),
+                                           (Const_e 6))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Index (
                                              (Var
-                                                (Ident.create_unbound "stateR'")),
-                                             (Const_e 0)))
-                                           ],
-                                         (Log (Xor,
-                                            (ExpVar
-                                               (Var
-                                                  (Ident.create_unbound "_tmp3_"))),
-                                            (ExpVar
-                                               (Var
-                                                  (Ident.create_unbound "_tmp4_")))
-                                            )),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp5_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Shift (Rrotate,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 1)))),
-                                          (Const_e 61))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp5_"))
-                                           ],
-                                         (Shift (Rrotate,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 1)))),
-                                            (Const_e 61))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp6_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Log (Xor,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 1)))),
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp5_")),
+                                                (Ident.create_unbound "state'")),
+                                             (Op_e (Add,
                                                 (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )))
-                                          )),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp6_"))
-                                           ],
-                                         (Log (Xor,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 1)))),
-                                            (ExpVar
+                                                   (Ident.create_unbound "i'")),
+                                                (Const_e 1)))
+                                             )),
+                                          (Const_e 2)))
+                                        ],
+                                      (Log (Xor,
+                                         (ExpVar
+                                            (Index (
                                                (Var
-                                                  (Ident.create_unbound "_tmp5_")))
-                                            )),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp7_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Shift (Rrotate,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 1)))),
-                                          (Const_e 39))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp7_"))
-                                           ],
-                                         (Shift (Rrotate,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 1)))),
-                                            (Const_e 39))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Index (
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp9_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               ))),
+                                         (ExpVar
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp10_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )))
+                                         )),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Index (
+                                            (Var
+                                               (Ident.create_unbound "stateR'")),
+                                            (Const_e 2)))
+                                          ],
+                                        (Log (Xor,
+                                           (ExpVar
                                               (Var
-                                                 (Ident.create_unbound "state'")),
-                                              (Op_e (Add,
-                                                 (Var_e
-                                                    (Ident.create_unbound "i'")),
-                                                 (Const_e 1)))
-                                              )),
-                                           (Const_e 1)))
-                                         ],
-                                       (Log (Xor,
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp6_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                ))),
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp7_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )))
-                                          )),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Index (
-                                             (Var
-                                                (Ident.create_unbound "stateR'")),
-                                             (Const_e 1)))
-                                           ],
-                                         (Log (Xor,
-                                            (ExpVar
-                                               (Var
-                                                  (Ident.create_unbound "_tmp6_"))),
-                                            (ExpVar
-                                               (Var
-                                                  (Ident.create_unbound "_tmp7_")))
-                                            )),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp8_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Shift (Rrotate,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 2)))),
-                                          (Const_e 1))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp8_"))
-                                           ],
-                                         (Shift (Rrotate,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 2)))),
-                                            (Const_e 1))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp9_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Log (Xor,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 2)))),
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp8_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )))
-                                          )),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp9_"))
-                                           ],
-                                         (Log (Xor,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 2)))),
-                                            (ExpVar
-                                               (Var
-                                                  (Ident.create_unbound "_tmp8_")))
-                                            )),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp10_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Shift (Rrotate,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 2)))),
-                                          (Const_e 6))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp10_"))
-                                           ],
-                                         (Shift (Rrotate,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 2)))),
-                                            (Const_e 6))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Index (
+                                                 (Ident.create_unbound "_tmp9_"))),
+                                           (ExpVar
                                               (Var
-                                                 (Ident.create_unbound "state'")),
-                                              (Op_e (Add,
-                                                 (Var_e
-                                                    (Ident.create_unbound "i'")),
-                                                 (Const_e 1)))
-                                              )),
-                                           (Const_e 2)))
-                                         ],
-                                       (Log (Xor,
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp9_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                ))),
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp10_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )))
-                                          )),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Index (
-                                             (Var
-                                                (Ident.create_unbound "stateR'")),
-                                             (Const_e 2)))
-                                           ],
-                                         (Log (Xor,
-                                            (ExpVar
-                                               (Var
-                                                  (Ident.create_unbound "_tmp9_"))),
-                                            (ExpVar
-                                               (Var
-                                                  (Ident.create_unbound "_tmp10_")))
-                                            )),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp11_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Shift (Rrotate,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 3)))),
-                                          (Const_e 10))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp11_"))
-                                           ],
-                                         (Shift (Rrotate,
-                                            (ExpVar
+                                                 (Ident.create_unbound "_tmp10_")))
+                                           )),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp11_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Shift (Rrotate,
+                                         (ExpVar
+                                            (Index (
                                                (Index (
                                                   (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 3)))),
-                                            (Const_e 10))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp12_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Log (Xor,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 3)))),
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp11_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )))
-                                          )),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp12_"))
-                                           ],
-                                         (Log (Xor,
-                                            (ExpVar
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 3)))),
+                                         (Const_e 10))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var
+                                            (Ident.create_unbound "_tmp11_"))
+                                          ],
+                                        (Shift (Rrotate,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 3)))),
+                                           (Const_e 10))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp12_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Log (Xor,
+                                         (ExpVar
+                                            (Index (
                                                (Index (
                                                   (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 3)))),
-                                            (ExpVar
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 3)))),
+                                         (ExpVar
+                                            (Index (
                                                (Var
-                                                  (Ident.create_unbound "_tmp11_")))
-                                            )),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp13_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Shift (Rrotate,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 3)))),
-                                          (Const_e 17))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp13_"))
-                                           ],
-                                         (Shift (Rrotate,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 3)))),
-                                            (Const_e 17))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Index (
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp11_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )))
+                                         )),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var
+                                            (Ident.create_unbound "_tmp12_"))
+                                          ],
+                                        (Log (Xor,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 3)))),
+                                           (ExpVar
                                               (Var
-                                                 (Ident.create_unbound "state'")),
-                                              (Op_e (Add,
-                                                 (Var_e
-                                                    (Ident.create_unbound "i'")),
-                                                 (Const_e 1)))
-                                              )),
-                                           (Const_e 3)))
-                                         ],
-                                       (Log (Xor,
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp12_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                ))),
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp13_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )))
-                                          )),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Index (
+                                                 (Ident.create_unbound "_tmp11_")))
+                                           )),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp13_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Shift (Rrotate,
+                                         (ExpVar
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 3)))),
+                                         (Const_e 17))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var
+                                            (Ident.create_unbound "_tmp13_"))
+                                          ],
+                                        (Shift (Rrotate,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 3)))),
+                                           (Const_e 17))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Index (
                                              (Var
-                                                (Ident.create_unbound "stateR'")),
-                                             (Const_e 3)))
-                                           ],
-                                         (Log (Xor,
-                                            (ExpVar
-                                               (Var
-                                                  (Ident.create_unbound "_tmp12_"))),
-                                            (ExpVar
-                                               (Var
-                                                  (Ident.create_unbound "_tmp13_")))
-                                            )),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp14_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Shift (Rrotate,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 4)))),
-                                          (Const_e 7))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp14_"))
-                                           ],
-                                         (Shift (Rrotate,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 4)))),
-                                            (Const_e 7))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp15_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Log (Xor,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 4)))),
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp14_")),
+                                                (Ident.create_unbound "state'")),
+                                             (Op_e (Add,
                                                 (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )))
-                                          )),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp15_"))
-                                           ],
-                                         (Log (Xor,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 4)))),
-                                            (ExpVar
+                                                   (Ident.create_unbound "i'")),
+                                                (Const_e 1)))
+                                             )),
+                                          (Const_e 3)))
+                                        ],
+                                      (Log (Xor,
+                                         (ExpVar
+                                            (Index (
                                                (Var
-                                                  (Ident.create_unbound "_tmp14_")))
-                                            )),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Var
-                                              (Ident.create_unbound "LinearLayer'V64_1__tmp16_")),
-                                           (Var_e (Ident.create_unbound "i'"))
-                                           ))
-                                         ],
-                                       (Shift (Rrotate,
-                                          (ExpVar
-                                             (Index (
-                                                (Index (
-                                                   (Var
-                                                      (Ident.create_unbound "_tmp30_")),
-                                                   (Var_e
-                                                      (Ident.create_unbound "i'"))
-                                                   )),
-                                                (Const_e 4)))),
-                                          (Const_e 41))),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Var
-                                             (Ident.create_unbound "_tmp16_"))
-                                           ],
-                                         (Shift (Rrotate,
-                                            (ExpVar
-                                               (Index (
-                                                  (Var
-                                                     (Ident.create_unbound "state'")),
-                                                  (Const_e 4)))),
-                                            (Const_e 41))),
-                                         false)))
-                                      ]
-                                    };
-                                  { content =
-                                    (Eqn (
-                                       [(Index (
-                                           (Index (
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp12_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               ))),
+                                         (ExpVar
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp13_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )))
+                                         )),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Index (
+                                            (Var
+                                               (Ident.create_unbound "stateR'")),
+                                            (Const_e 3)))
+                                          ],
+                                        (Log (Xor,
+                                           (ExpVar
                                               (Var
-                                                 (Ident.create_unbound "state'")),
-                                              (Op_e (Add,
-                                                 (Var_e
-                                                    (Ident.create_unbound "i'")),
-                                                 (Const_e 1)))
-                                              )),
-                                           (Const_e 4)))
-                                         ],
-                                       (Log (Xor,
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp15_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                ))),
-                                          (ExpVar
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "LinearLayer'V64_1__tmp16_")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )))
-                                          )),
-                                       false));
-                                    orig =
-                                    [((Ident.create_unbound "LinearLayer'V64"),
-                                      (Eqn (
-                                         [(Index (
+                                                 (Ident.create_unbound "_tmp12_"))),
+                                           (ExpVar
+                                              (Var
+                                                 (Ident.create_unbound "_tmp13_")))
+                                           )),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp14_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Shift (Rrotate,
+                                         (ExpVar
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 4)))),
+                                         (Const_e 7))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var
+                                            (Ident.create_unbound "_tmp14_"))
+                                          ],
+                                        (Shift (Rrotate,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 4)))),
+                                           (Const_e 7))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp15_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Log (Xor,
+                                         (ExpVar
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 4)))),
+                                         (ExpVar
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp14_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )))
+                                         )),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var
+                                            (Ident.create_unbound "_tmp15_"))
+                                          ],
+                                        (Log (Xor,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 4)))),
+                                           (ExpVar
+                                              (Var
+                                                 (Ident.create_unbound "_tmp14_")))
+                                           )),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Var
+                                             (Ident.create_unbound "LinearLayer'V64_1__tmp16_")),
+                                          (Var_e (Ident.create_unbound "i'"))
+                                          ))
+                                        ],
+                                      (Shift (Rrotate,
+                                         (ExpVar
+                                            (Index (
+                                               (Index (
+                                                  (Var
+                                                     (Ident.create_unbound "_tmp30_")),
+                                                  (Var_e
+                                                     (Ident.create_unbound "i'"))
+                                                  )),
+                                               (Const_e 4)))),
+                                         (Const_e 41))),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Var
+                                            (Ident.create_unbound "_tmp16_"))
+                                          ],
+                                        (Shift (Rrotate,
+                                           (ExpVar
+                                              (Index (
+                                                 (Var
+                                                    (Ident.create_unbound "state'")),
+                                                 (Const_e 4)))),
+                                           (Const_e 41))),
+                                        false)))
+                                     ]
+                                   };
+                                 { content =
+                                   (Eqn (
+                                      [(Index (
+                                          (Index (
                                              (Var
-                                                (Ident.create_unbound "stateR'")),
-                                             (Const_e 4)))
-                                           ],
-                                         (Log (Xor,
-                                            (ExpVar
+                                                (Ident.create_unbound "state'")),
+                                             (Op_e (Add,
+                                                (Var_e
+                                                   (Ident.create_unbound "i'")),
+                                                (Const_e 1)))
+                                             )),
+                                          (Const_e 4)))
+                                        ],
+                                      (Log (Xor,
+                                         (ExpVar
+                                            (Index (
                                                (Var
-                                                  (Ident.create_unbound "_tmp15_"))),
-                                            (ExpVar
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp15_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               ))),
+                                         (ExpVar
+                                            (Index (
                                                (Var
-                                                  (Ident.create_unbound "_tmp16_")))
-                                            )),
-                                         false)))
-                                      ]
-                                    }
-                                  ],
-                                []));
+                                                  (Ident.create_unbound "LinearLayer'V64_1__tmp16_")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )))
+                                         )),
+                                      false));
+                                   orig =
+                                   [((Ident.create_unbound "LinearLayer'V64"),
+                                     (Eqn (
+                                        [(Index (
+                                            (Var
+                                               (Ident.create_unbound "stateR'")),
+                                            (Const_e 4)))
+                                          ],
+                                        (Log (Xor,
+                                           (ExpVar
+                                              (Var
+                                                 (Ident.create_unbound "_tmp15_"))),
+                                           (ExpVar
+                                              (Var
+                                                 (Ident.create_unbound "_tmp16_")))
+                                           )),
+                                        false)))
+                                     ]
+                                   }
+                                 ];
+                               opts = []};
                              orig = [] };
                            { content =
                              (Eqn (

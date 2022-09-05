@@ -1943,31 +1943,32 @@ let aes_mslice_003 = { nodes =
                            node =
                            (Single ([],
                               [{ content =
-                                 (Loop ((Ident.create_unbound "i'"),
-                                    (Const_e 0), (Const_e 7),
-                                    [{ content =
-                                       (Eqn (
-                                          [(Index (
-                                              (Var
-                                                 (Ident.create_unbound "out'")),
-                                              (Var_e
-                                                 (Ident.create_unbound "i'"))
-                                              ))
-                                            ],
-                                          (Shuffle (
-                                             (Index (
-                                                (Var
-                                                   (Ident.create_unbound "inputSR'")),
-                                                (Var_e
-                                                   (Ident.create_unbound "i'"))
-                                                )),
-                                             [0; 5; 10; 15; 4; 9; 14; 3; 8;
-                                               13; 2; 7; 12; 1; 6; 11]
-                                             )),
-                                          false));
-                                       orig = [] }
-                                      ],
-                                    [Unroll]));
+                                 Loop {id = (Ident.create_unbound "i'");
+                                   start = (Const_e 0); stop = (Const_e 7);
+                                   body =
+                                   [{ content =
+                                      (Eqn (
+                                         [(Index (
+                                             (Var
+                                                (Ident.create_unbound "out'")),
+                                             (Var_e
+                                                (Ident.create_unbound "i'"))
+                                             ))
+                                           ],
+                                         (Shuffle (
+                                            (Index (
+                                               (Var
+                                                  (Ident.create_unbound "inputSR'")),
+                                               (Var_e
+                                                  (Ident.create_unbound "i'"))
+                                               )),
+                                            [0; 5; 10; 15; 4; 9; 14; 3; 8;
+                                              13; 2; 7; 12; 1; 6; 11]
+                                            )),
+                                         false));
+                                      orig = [] }
+                                     ];
+                                   opts = [Unroll]};
                                  orig = [] }
                                 ]
                               ))
@@ -2778,56 +2779,55 @@ let aes_mslice_003 = { nodes =
                                     false));
                                  orig = [] };
                                 { content =
-                                  (Loop ((Ident.create_unbound "i'"),
-                                     (Const_e 1), (Const_e 9),
-                                     [{ content =
-                                        (Eqn (
-                                           [(Index (
-                                               (Var
-                                                  (Ident.create_unbound "tmp'")),
-                                               (Var_e
-                                                  (Ident.create_unbound "i'"))
-                                               ))
-                                             ],
-                                           (Fun (
-                                              (Ident.create_unbound "AddRoundKey'"),
-                                              [(Fun (
-                                                  (Ident.create_unbound "MixColumn'"),
-                                                  [(Fun (
-                                                      (Ident.create_unbound "ShiftRows'"),
-                                                      [(Fun (
-                                                          (Ident.create_unbound "SubBytes'"),
-                                                          [(ExpVar
-                                                              (Index (
-                                                                 (Var
-                                                                    (Ident.create_unbound "tmp'")),
-                                                                 (Op_e (Sub,
-                                                                    (
-                                                                    Var_e
+                                  Loop {id = (Ident.create_unbound "i'");
+                                    start = (Const_e 1); stop = (Const_e 9);
+                                    body =
+                                    [{ content =
+                                       (Eqn (
+                                          [(Index (
+                                              (Var
+                                                 (Ident.create_unbound "tmp'")),
+                                              (Var_e
+                                                 (Ident.create_unbound "i'"))
+                                              ))
+                                            ],
+                                          (Fun (
+                                             (Ident.create_unbound "AddRoundKey'"),
+                                             [(Fun (
+                                                 (Ident.create_unbound "MixColumn'"),
+                                                 [(Fun (
+                                                     (Ident.create_unbound "ShiftRows'"),
+                                                     [(Fun (
+                                                         (Ident.create_unbound "SubBytes'"),
+                                                         [(ExpVar
+                                                             (Index (
+                                                                (Var
+                                                                   (Ident.create_unbound "tmp'")),
+                                                                (Op_e (Sub,
+                                                                   (Var_e
                                                                     (Ident.create_unbound "i'")),
-                                                                    (
-                                                                    Const_e 1)
-                                                                    ))
-                                                                 )))
-                                                            ]
-                                                          ))
-                                                        ]
-                                                      ))
-                                                    ]
-                                                  ));
-                                                (ExpVar
-                                                   (Index (
-                                                      (Var
-                                                         (Ident.create_unbound "key'")),
-                                                      (Var_e
-                                                         (Ident.create_unbound "i'"))
-                                                      )))
-                                                ]
-                                              )),
-                                           false));
-                                        orig = [] }
-                                       ],
-                                     []));
+                                                                   (Const_e 1)
+                                                                   ))
+                                                                )))
+                                                           ]
+                                                         ))
+                                                       ]
+                                                     ))
+                                                   ]
+                                                 ));
+                                               (ExpVar
+                                                  (Index (
+                                                     (Var
+                                                        (Ident.create_unbound "key'")),
+                                                     (Var_e
+                                                        (Ident.create_unbound "i'"))
+                                                     )))
+                                               ]
+                                             )),
+                                          false));
+                                       orig = [] }
+                                      ];
+                                    opts = []};
                                   orig = [] };
                                 { content =
                                   (Eqn (

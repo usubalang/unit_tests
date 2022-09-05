@@ -610,49 +610,49 @@ let ascon_003 = { nodes =
                                 false));
                              orig = [] };
                            { content =
-                             (Loop ((Ident.create_unbound "i'"), (Const_e 0),
-                                (Const_e 11),
-                                [{ content =
-                                   (Eqn (
-                                      [(Index (
-                                          (Var
-                                             (Ident.create_unbound "state'")),
-                                          (Op_e (Add,
-                                             (Var_e
-                                                (Ident.create_unbound "i'")),
-                                             (Const_e 1)))
-                                          ))
-                                        ],
-                                      (Fun (
-                                         (Ident.create_unbound "LinearLayer'"),
-                                         [(Fun (
-                                             (Ident.create_unbound "Sbox'"),
-                                             [(Fun (
-                                                 (Ident.create_unbound "AddConstant'"),
-                                                 [(ExpVar
+                             Loop {id = (Ident.create_unbound "i'");
+                               start = (Const_e 0); stop = (Const_e 11);
+                               body =
+                               [{ content =
+                                  (Eqn (
+                                     [(Index (
+                                         (Var (Ident.create_unbound "state'")),
+                                         (Op_e (Add,
+                                            (Var_e
+                                               (Ident.create_unbound "i'")),
+                                            (Const_e 1)))
+                                         ))
+                                       ],
+                                     (Fun (
+                                        (Ident.create_unbound "LinearLayer'"),
+                                        [(Fun (
+                                            (Ident.create_unbound "Sbox'"),
+                                            [(Fun (
+                                                (Ident.create_unbound "AddConstant'"),
+                                                [(ExpVar
+                                                    (Index (
+                                                       (Var
+                                                          (Ident.create_unbound "state'")),
+                                                       (Var_e
+                                                          (Ident.create_unbound "i'"))
+                                                       )));
+                                                  (ExpVar
                                                      (Index (
                                                         (Var
-                                                           (Ident.create_unbound "state'")),
+                                                           (Ident.create_unbound "consts'")),
                                                         (Var_e
                                                            (Ident.create_unbound "i'"))
-                                                        )));
-                                                   (ExpVar
-                                                      (Index (
-                                                         (Var
-                                                            (Ident.create_unbound "consts'")),
-                                                         (Var_e
-                                                            (Ident.create_unbound "i'"))
-                                                         )))
-                                                   ]
-                                                 ))
-                                               ]
-                                             ))
-                                           ]
-                                         )),
-                                      false));
-                                   orig = [] }
-                                  ],
-                                []));
+                                                        )))
+                                                  ]
+                                                ))
+                                              ]
+                                            ))
+                                          ]
+                                        )),
+                                     false));
+                                  orig = [] }
+                                 ];
+                               opts = []};
                              orig = [] };
                            { content =
                              (Eqn ([(Var (Ident.create_unbound "output'"))],
