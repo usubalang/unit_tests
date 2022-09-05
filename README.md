@@ -17,7 +17,7 @@ Updating this repository is then done in two steps:
    This will populate the `rsc` dir
 - Go in `unit_tests` and execute:
    ```sh
-   ./generate.sh --steps-dir rsc
+   ./generate.sh --rsc-dir rsc
    ```
 
 ## Checking
